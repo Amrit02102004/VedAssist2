@@ -72,10 +72,10 @@ def register_view(request):
     if request.method == "POST":
         # Get form input values
         username = request.POST["username"]
+        email = request.POST["email"]
         password = request.POST["password"]
         confirmation = request.POST["confirm_password"] 
-        email = request.POST["email"]
-        
+        print("Confirmed")
         if email == "": email = username + "@example.com"
         
         if password != confirmation:
